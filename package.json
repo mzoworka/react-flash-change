@@ -34,7 +34,6 @@
     ],
     "scripts": {
         "build": "rimraf dist && mkdir dist && yarn build:flow && yarn build:source",
-        "build:demo": "build-storybook -o demo",
         "build:flow": "cpr flow-template dist/index.cjs.js.flow && cpr flow-template dist/index.esm.js.flow",
         "build:source": "rollup -c",
         "flow": "flow check --max-warnings=0 src && flow check website",
@@ -44,7 +43,6 @@
         "prepare": "yarn run build",
         "prettier": "prettier --write \"**/*.{js,json,css}\"",
         "start": "rollup -c -w",
-        "storybook": "start-storybook -p 9009",
         "test": "cross-env CI=1 react-scripts test --env=jsdom",
         "test:watch": "react-scripts test --env=jsdom"
     },
@@ -79,10 +77,6 @@
         "@babel/preset-env": "^7.16.11",
         "@babel/preset-flow": "^7.16.7",
         "@babel/preset-react": "^7.16.7",
-        "@storybook/addon-actions": "^6.4.20",
-        "@storybook/addon-links": "^6.4.20",
-        "@storybook/addons": "^6.4.20",
-        "@storybook/react": "^6.4.20",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^9.0.0",
         "babel-loader": "^8.2.4",
